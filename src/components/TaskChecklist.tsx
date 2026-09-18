@@ -23,11 +23,11 @@ export default function TaskChecklist() {
       <div className="bg-white rounded-xl p-5 shadow-sm border border-slate-100 mb-6">
         <div className="flex items-center justify-between mb-3">
           <span className="text-sm font-medium text-slate-700">پیشرفت کلی</span>
-          <span className="text-sm font-bold text-blue-600">{completedCount} از {tasks.length} انجام شده</span>
+          <span className="text-sm font-bold text-red-700">{completedCount} از {tasks.length} انجام شده</span>
         </div>
         <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
           <div
-            className="h-full bg-gradient-to-l from-blue-500 to-indigo-500 rounded-full transition-all duration-500"
+            className="h-full bg-gradient-to-l from-red-600 to-amber-500 rounded-full transition-all duration-500"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -41,7 +41,7 @@ export default function TaskChecklist() {
         <select
           value={filterFreq}
           onChange={(e) => setFilterFreq(e.target.value)}
-          className="px-3 py-2 rounded-lg border border-slate-200 text-sm text-slate-700 bg-white focus:border-blue-400 focus:ring-2 focus:ring-blue-50 outline-none cursor-pointer"
+          className="px-3 py-2 rounded-lg border border-slate-200 text-sm text-slate-700 bg-white focus:border-red-400 focus:ring-2 focus:ring-red-50 outline-none cursor-pointer"
         >
           <option value="">همه دوره‌ها</option>
           {frequencies.map(f => (
@@ -51,7 +51,7 @@ export default function TaskChecklist() {
         <select
           value={filterCat}
           onChange={(e) => setFilterCat(e.target.value)}
-          className="px-3 py-2 rounded-lg border border-slate-200 text-sm text-slate-700 bg-white focus:border-blue-400 focus:ring-2 focus:ring-blue-50 outline-none cursor-pointer"
+          className="px-3 py-2 rounded-lg border border-slate-200 text-sm text-slate-700 bg-white focus:border-red-400 focus:ring-2 focus:ring-red-50 outline-none cursor-pointer"
         >
           <option value="">همه دسته‌ها</option>
           {categories.map(c => (
@@ -80,7 +80,7 @@ export default function TaskChecklist() {
               className={`bg-white rounded-xl border transition-all ${
                 isCompleted
                   ? 'border-green-200 bg-green-50/50'
-                  : 'border-slate-100 hover:border-blue-200'
+                  : 'border-slate-100 hover:border-red-200'
               }`}
             >
               <div className="p-4 flex items-start gap-3">
@@ -90,7 +90,7 @@ export default function TaskChecklist() {
                   className={`w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-all cursor-pointer ${
                     isCompleted
                       ? 'bg-green-500 border-green-500 text-white'
-                      : 'border-slate-300 hover:border-blue-400'
+                      : 'border-slate-300 hover:border-red-400'
                   }`}
                 >
                   {isCompleted && (
@@ -113,7 +113,7 @@ export default function TaskChecklist() {
                     </div>
                     <button
                       onClick={() => setExpandedTask(isExpanded ? null : task.id)}
-                      className="text-slate-400 hover:text-blue-500 transition-colors cursor-pointer flex-shrink-0"
+                      className="text-slate-400 hover:text-red-500 transition-colors cursor-pointer flex-shrink-0"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 transition-transform ${isExpanded ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -124,7 +124,7 @@ export default function TaskChecklist() {
                   {/* Badges */}
                   <div className="flex flex-wrap gap-2 mt-2">
                     <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${
-                      task.frequency === 'ماهانه' ? 'bg-blue-100 text-blue-700' :
+                      task.frequency === 'ماهانه' ? 'bg-red-100 text-red-700' :
                       task.frequency === 'فصلی' ? 'bg-purple-100 text-purple-700' :
                       'bg-orange-100 text-orange-700'
                     }`}>
@@ -147,7 +147,7 @@ export default function TaskChecklist() {
                       <ul className="space-y-1.5">
                         {task.tips.map((tip, i) => (
                           <li key={i} className="text-xs text-slate-600 flex items-start gap-2">
-                            <span className="text-blue-400 mt-0.5">•</span>
+                            <span className="text-red-400 mt-0.5">•</span>
                             {tip}
                           </li>
                         ))}

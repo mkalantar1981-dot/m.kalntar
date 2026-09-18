@@ -41,13 +41,13 @@ export default function ConsultationModal() {
               <div className="text-6xl mb-4">✅</div>
               <h3 className="text-xl font-bold text-slate-800 mb-2">درخواست شما ثبت شد!</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                مشاور بیمه ما در اسرع وقت با شما تماس خواهد گرفت.
+                مشاور بیمه دفتر ما اندیشه در اسرع وقت با شما تماس خواهد گرفت.
                 <br />
                 معمولاً ظرف ۲۴ ساعت کاری.
               </p>
               <button
                 onClick={handleClose}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors cursor-pointer"
+                className="bg-red-700 hover:bg-red-800 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors cursor-pointer"
               >
                 بستن
               </button>
@@ -56,7 +56,7 @@ export default function ConsultationModal() {
             /* Form State */
             <div>
               {/* Header */}
-              <div className="bg-gradient-to-l from-blue-600 to-indigo-600 p-6 rounded-t-2xl text-white">
+              <div className="bg-gradient-to-l from-red-700 to-red-900 p-6 rounded-t-2xl text-white">
                 <div className="flex items-center justify-between">
                   <h3 className="text-lg font-bold">مشاوره رایگان بیمه</h3>
                   <button
@@ -68,8 +68,11 @@ export default function ConsultationModal() {
                     </svg>
                   </button>
                 </div>
-                <p className="text-blue-100 text-sm mt-1">
+                <p className="text-red-100 text-sm mt-1">
                   {role === 'manager' ? 'مشاوره بیمه ساختمان و مسئولیت مدیر' : 'مشاوره بیمه‌های شخصی و ساختمانی'}
+                </p>
+                <p className="text-red-200 text-xs mt-1">
+                  دفتر بیمه ما اندیشه
                 </p>
               </div>
 
@@ -82,7 +85,7 @@ export default function ConsultationModal() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-50 outline-none transition-all text-slate-800"
+                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-red-400 focus:ring-2 focus:ring-red-50 outline-none transition-all text-slate-800"
                     placeholder="نام خود را وارد کنید"
                   />
                 </div>
@@ -94,7 +97,7 @@ export default function ConsultationModal() {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-50 outline-none transition-all text-slate-800"
+                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-red-400 focus:ring-2 focus:ring-red-50 outline-none transition-all text-slate-800"
                     placeholder="۰۹۱۲XXXXXXX"
                     dir="ltr"
                   />
@@ -107,7 +110,7 @@ export default function ConsultationModal() {
                   <select
                     value={formData.buildingType}
                     onChange={(e) => setFormData(prev => ({ ...prev, buildingType: e.target.value }))}
-                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-50 outline-none transition-all text-slate-800 cursor-pointer"
+                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-red-400 focus:ring-2 focus:ring-red-50 outline-none transition-all text-slate-800 cursor-pointer"
                   >
                     <option value="">انتخاب کنید</option>
                     {role === 'manager' ? (
@@ -134,7 +137,7 @@ export default function ConsultationModal() {
                   <textarea
                     value={formData.message}
                     onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-50 outline-none transition-all text-slate-800 resize-none"
+                    className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-red-400 focus:ring-2 focus:ring-red-50 outline-none transition-all text-slate-800 resize-none"
                     rows={3}
                     placeholder="سؤال یا توضیح خاصی دارید؟"
                   />
@@ -142,7 +145,7 @@ export default function ConsultationModal() {
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold text-sm transition-colors cursor-pointer shadow-md"
+                  className="w-full bg-red-700 hover:bg-red-800 text-white py-3 rounded-lg font-semibold text-sm transition-colors cursor-pointer shadow-md"
                 >
                   ارسال درخواست مشاوره
                 </button>

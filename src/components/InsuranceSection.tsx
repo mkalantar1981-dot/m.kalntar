@@ -42,13 +42,13 @@ export default function InsuranceSection({ role }: InsuranceSectionProps) {
           return (
             <div
               key={item.id}
-              className="bg-white rounded-xl border border-slate-100 overflow-hidden hover:border-emerald-200 transition-all"
+              className="bg-white rounded-xl border border-slate-100 overflow-hidden hover:border-red-200 transition-all"
             >
               <button
                 onClick={() => setExpandedId(isExpanded ? null : item.id)}
                 className="w-full p-5 flex items-start gap-3 text-right cursor-pointer"
               >
-                <div className="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
                   <span className="text-xl">{item.icon}</span>
                 </div>
                 <div className="flex-1">
@@ -80,7 +80,7 @@ export default function InsuranceSection({ role }: InsuranceSectionProps) {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {item.coverage.map((cov, i) => (
-                          <span key={i} className="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs rounded-full border border-emerald-100">
+                          <span key={i} className="px-3 py-1 bg-red-50 text-red-700 text-xs rounded-full border border-red-100">
                             {cov}
                           </span>
                         ))}
@@ -111,15 +111,15 @@ export default function InsuranceSection({ role }: InsuranceSectionProps) {
       </div>
 
       {/* Consultation CTA */}
-      <div className="mt-8 bg-gradient-to-l from-blue-600 to-indigo-600 rounded-2xl p-6 sm:p-8 text-white text-center">
+      <div className="mt-8 bg-gradient-to-l from-red-700 to-red-900 rounded-2xl p-6 sm:p-8 text-white text-center">
         <div className="text-4xl mb-3">💬</div>
         <h3 className="text-xl font-bold mb-2">مشاوره رایگان بیمه</h3>
-        <p className="text-blue-100 text-sm mb-5 max-w-md mx-auto leading-relaxed">
-          برای انتخاب بهترین پوشش بیمه‌ای مناسب ساختمان و بودجه خود، با مشاور بیمه ما تماس بگیرید.
+        <p className="text-red-100 text-sm mb-5 max-w-md mx-auto leading-relaxed">
+          برای انتخاب بهترین پوشش بیمه‌ای مناسب ساختمان و بودجه خود، با مشاور بیمه دفتر ما اندیشه تماس بگیرید.
         </p>
         <button
           onClick={() => setShowConsultation(true)}
-          className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-3 rounded-full font-semibold text-sm transition-colors cursor-pointer shadow-lg"
+          className="bg-white text-red-700 hover:bg-red-50 px-6 py-3 rounded-full font-semibold text-sm transition-colors cursor-pointer shadow-lg"
         >
           درخواست مشاوره رایگان
         </button>

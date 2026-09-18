@@ -27,14 +27,14 @@ export default function LegalGuide() {
           return (
             <div
               key={item.id}
-              className="bg-white rounded-xl border border-slate-100 overflow-hidden hover:border-blue-200 transition-all"
+              className="bg-white rounded-xl border border-slate-100 overflow-hidden hover:border-red-200 transition-all"
             >
               {/* Header */}
               <button
                 onClick={() => setExpandedId(isExpanded ? null : item.id)}
                 className="w-full p-5 flex items-start gap-3 text-right cursor-pointer"
               >
-                <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
                   <span className="text-xl">{item.icon}</span>
                 </div>
                 <div className="flex-1">
@@ -66,7 +66,7 @@ export default function LegalGuide() {
                     <ul className="space-y-2.5">
                       {item.details.map((detail, i) => (
                         <li key={i} className="text-sm text-slate-700 flex items-start gap-2.5 leading-relaxed">
-                          <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></span>
+                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full mt-2 flex-shrink-0"></span>
                           {detail}
                         </li>
                       ))}

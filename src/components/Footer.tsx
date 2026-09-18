@@ -1,4 +1,5 @@
 import { useApp } from '../context/AppContext';
+import Logo from './Logo';
 
 export default function Footer() {
   const { setShowConsultation } = useApp();
@@ -9,14 +10,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                <span className="text-sm">🏢</span>
-              </div>
-              <span className="text-lg font-bold text-white">مدیریار</span>
+            <div className="mb-4">
+              <Logo size="md" />
             </div>
             <p className="text-sm text-slate-400 leading-relaxed">
-              دستیار هوشمند مدیران و ساکنین ساختمان. راهنمای قانونی، چک‌لیست وظایف و مشاوره بیمه — همه در یک اپلیکیشن.
+              راهنمای مدیر و ساکن ساختمان. ابزار مدیریت روزمره، راهنمای قانونی و مسیر طبیعی اتصال به مشاوره بیمه دفتر ما اندیشه.
             </p>
           </div>
 
@@ -35,11 +33,11 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-3 text-sm">مشاوره رایگان</h3>
             <p className="text-sm text-slate-400 mb-3 leading-relaxed">
-              برای مشاوره بیمه ساختمان و مسئولیت مدیر، با ما تماس بگیرید.
+              برای مشاوره بیمه ساختمان و مسئولیت مدیر، با دفتر بیمه ما اندیشه تماس بگیرید.
             </p>
             <button
               onClick={() => setShowConsultation(true)}
-              className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer"
+              className="bg-red-700 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer"
             >
               💬 درخواست مشاوره
             </button>
@@ -49,10 +47,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-slate-700 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-xs text-slate-500">
-            © ۱۴۰۵ مدیریار — تمامی حقوق محفوظ است
+            © ۱۴۰۵ برج بان — تمامی حقوق محفوظ است
           </p>
           <p className="text-xs text-slate-500 text-center sm:text-right">
-            این راهنما توسط <span className="text-blue-400 font-medium">مشاور بیمه</span> تهیه و به‌صورت رایگان در اختیار مدیران و ساکنین قرار گرفته است.
+            این راهنما توسط <span className="text-red-400 font-medium">دفتر بیمه ما اندیشه</span> تهیه و به‌صورت رایگان در اختیار مدیران و ساکنین قرار گرفته است.
           </p>
         </div>
       </div>

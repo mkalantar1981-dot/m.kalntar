@@ -19,16 +19,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #fef3c7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #94a3b8;
+  background: #991b1b;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: #7f1d1d;
 }
 
 /* Smooth animations */
@@ -41,4 +41,17 @@
 /* Fix transition for elements that shouldn't animate */
 input, textarea, select {
   transition-property: border-color, box-shadow;
+}
+
+/* Brand gradient - زرشکی تا طلایی */
+.brand-gradient {
+  background: linear-gradient(to top, #7f1d1d, #991b1b, #b91c1c, #dc2626, #f59e0b, #fbbf24);
+}
+
+/* Brand text gradient */
+.brand-text-gradient {
+  background: linear-gradient(to left, #fbbf24, #f59e0b, #dc2626, #991b1b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

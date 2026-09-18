@@ -15,9 +15,9 @@ export default function ManagerDashboard() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Welcome Section */}
-      <div className="bg-gradient-to-l from-blue-50 to-indigo-50 rounded-2xl p-6 sm:p-8 mb-8 border border-blue-100">
+      <div className="bg-gradient-to-l from-red-50 to-amber-50 rounded-2xl p-6 sm:p-8 mb-8 border border-red-100">
         <div className="flex items-start gap-4">
-          <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+          <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
             <span className="text-2xl">👨‍💼</span>
           </div>
           <div>
@@ -39,7 +39,7 @@ export default function ManagerDashboard() {
             onClick={() => setManagerTab(tab.id)}
             className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-lg text-sm font-medium transition-all cursor-pointer ${
               managerTab === tab.id
-                ? 'bg-blue-600 text-white shadow-md'
+                ? 'bg-red-700 text-white shadow-md'
                 : 'text-slate-600 hover:bg-slate-100'
             }`}
           >
